@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>Hospital Management System</title>
+</head>
+<body>
+    <header>
+        <h1>Hospital Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'patient_list' %}">Patients</a></li>
+                <li><a href="{% url 'doctor_list' %}">Doctors</a></li>
+                <li><a href="{% url 'appointment_list' %}">Appointments</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2024 Hospital Management System</p>
+    </footer>
+</body>
+</html>
